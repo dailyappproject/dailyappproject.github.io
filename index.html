@@ -16,16 +16,19 @@
     <link rel="stylesheet" href="./css/index.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 <header>
     <div data-aos="fade-down" class="container">
         <ul class="nav-list">
             <li  class="nav-item">
-                <a href="#" class="nav-link"><img class="nav-icon" src="/favicon/favicon.ico" alt=""></a>
+                <a href="#" class="nav-link back-to-top"><img class="nav-icon" src="/favicon/favicon.ico" alt=""></a>
             </li>
             <li class="nav-item">
-                <a href="#quem-somos" class="nav-link">quem somos</a>
+                <a href="#quem-somos" class="nav-link">Quem Somos</a>
             </li>
             <li  class="nav-item">
                 <a href="#ajuda" class="nav-link">Nos Ajude!</a>
@@ -42,9 +45,9 @@
     <h1 class="title head" id="head">Daily! app</h1>
     <h3 class="title subhead">App de gerenciamento escolar</h3>
 </div>
-<section data-aos="fade-down" class="hero quem-somos" id="quem-somos">
-    <h1 class="title">Quem somos.</h1>
-    <p class="para">
+<section  class="hero quem-somos" id="quem-somos">
+    <h1 data-aos="fade-down" class="title">Quem somos.</h1>
+    <p data-aos="fade-up" class="para">
         lore nareba ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis,<br>
         tellus id suscipit iaculis, velit neque bibendum nisi,<br>
         sed condimentum nunc lacus vel nibh. Maecenas faucibus, enim eu egestas vulputate, turpis neque rhoncus tortor,<br>
@@ -59,7 +62,7 @@
 </section>
 <section  class="hero ajudar" id="ajuda">
     <h1 data-aos="fade-down" class="title">Como nos ajudar</h1>
-    <p data-aos="fade-left"class="para">
+    <p data-aos="fade-up"class="para">
         lore nareba ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis,<br>
         tellus id suscipit iaculis, velit neque bibendum nisi,<br>
         sed condimentum nunc lacus vel nibh. Maecenas faucibus, enim eu egestas vulputate, turpis neque rhoncus tortor,<br>
@@ -72,9 +75,37 @@
         in ullamcorper diam. <br>
     </p>
 </section>
-
+<button class="voltar-ao-topo">
+    <i class="material-icons">arrow_upward</i>
+</button>
 <script>
   AOS.init();
+</script>
+<script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+  
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
 </script>
 <script src="./js/main.js"></script>
 </body>

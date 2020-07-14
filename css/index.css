@@ -82,3 +82,19 @@ header{
     margin-left: 15rem;
     font-size: 25px;
 }
+.voltar-ao-topo{
+    
+    height: 5rem;
+    width: 5rem;
+    background-color: #eae6ffc0;
+    margin: 2rem;
+    position: relative;
+    justify-content: right;
+    border-radius: 50%;
+    align-items: center;
+    box-shadow: none;
+    margin-left: 181rem;
+}
+.quem-somos{
+    width: 100%;
+}
