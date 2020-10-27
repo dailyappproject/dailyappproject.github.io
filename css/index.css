@@ -87,13 +87,14 @@ header{
     height: 5rem;
     width: 5rem;
     background-color: #eae6ffc0;
-    margin: 2rem;
-    position: relative;
+    margin: 2rem auto;
+    position: absolute;
     justify-content: right;
     border-radius: 50%;
     align-items: center;
     box-shadow: none;
-    margin-left: 181rem;
+    right: 1%;
+
 }
 .quem-somos{
     width: 100%;

@@ -1,11 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Daily app!</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .nav-list{
+            justify-content: space-between;
+        } 
+    </style>
+
 </head>
 <body>
-    <h1>parabens</h1>
-</body>
-</html>
+<header>
+    <div data-aos="fade-down" class="container">
+        <ul class="nav-list">
+            <li  class="nav-item">
+                <a href="#" class="nav-link back-to-top"><img class="nav-icon" src="/favicon/favicon.ico" alt=""></a>
+            </li>
+            
+            <li  class="nav-item">
+                <a href="../" class="nav-link">&lt voltar ao inicio</a>
+            </li>
+
+
+        </ul>
+    </div>
+</header>
+    <button class="voltar-ao-topo">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    </script>
+    <script src=".../js/main.js"></script>
+    </body>
+    </html>
